@@ -281,20 +281,6 @@ namespace Nancy.Tests.Unit.Security
         }
 
         [Fact]
-        public void Should_return_false_for_valid_claim_if_the_user_is_null()
-        {
-            // Given
-            ClaimsPrincipal user = null;
-            Func<IEnumerable<Claim>, bool> isValid = claims => true;
-
-            // When
-            var result = user.HasValidClaims(isValid);
-
-            // Then
-            result.ShouldBeFalse();
-        }
-
-        [Fact]
         public void Should_return_false_for_required_role_if_the_roles_are_null()
         {
             // Given

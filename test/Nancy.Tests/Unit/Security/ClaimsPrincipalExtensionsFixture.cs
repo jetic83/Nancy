@@ -293,7 +293,7 @@ namespace Nancy.Tests.Unit.Security
             // Then
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void Should_return_false_for_required_role_if_the_user_does_not_have_role()
         {
@@ -349,7 +349,7 @@ namespace Nancy.Tests.Unit.Security
             // Then
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void Should_return_false_for_required_roles_if_the_user_does_not_have_all_roles()
         {
@@ -419,7 +419,7 @@ namespace Nancy.Tests.Unit.Security
             // Then
             result.ShouldBeFalse();
         }
-        
+
         [Fact]
         public void Should_return_false_for_any_required_role_if_the_user_does_not_have_any_role()
         {

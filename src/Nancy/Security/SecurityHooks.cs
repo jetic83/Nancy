@@ -91,8 +91,6 @@
             return ForbiddenIfNot(ctx => ctx.CurrentUser.IsInAnyRole(roles));
         }
 
-
-
         /// <summary>
         /// Creates a hook to be used in a pipeline before a route handler to ensure that
         /// the request satisfies a specific test.

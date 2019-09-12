@@ -51,7 +51,7 @@ namespace Nancy.Security
         public static void RequiresRoles(this INancyModule module, params string[] requiredRoles)
         {
             module.AddBeforeHookOrExecute(SecurityHooks.RequiresAuthentication(), "Requires Authentication");
-            module.AddBeforeHookOrExecute(SecurityHooks.RequiresRoles(requiredClaims), "Requires Roles");
+            module.AddBeforeHookOrExecute(SecurityHooks.RequiresRoles(requiredRoles), "Requires Roles");
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Nancy.Security
         public static void RequiresAnyRole(this INancyModule module, params string[] requiredRoles)
         {
             module.AddBeforeHookOrExecute(SecurityHooks.RequiresAuthentication(), "Requires Authentication");
-            module.AddBeforeHookOrExecute(SecurityHooks.RequiresAnyRole(requiredClaims), "Requires Any Role");
+            module.AddBeforeHookOrExecute(SecurityHooks.RequiresAnyRole(requiredRoles), "Requires Any Role");
         }
         
         /// <summary>

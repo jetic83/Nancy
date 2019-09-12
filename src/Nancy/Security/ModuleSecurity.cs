@@ -64,7 +64,7 @@ namespace Nancy.Security
             module.AddBeforeHookOrExecute(SecurityHooks.RequiresAuthentication(), "Requires Authentication");
             module.AddBeforeHookOrExecute(SecurityHooks.RequiresAnyRole(requiredRoles), "Requires Any Role");
         }
-
+        
         /// <summary>
         /// This module requires https.
         /// </summary>

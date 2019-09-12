@@ -65,7 +65,7 @@
         /// <returns>True if the user is in all of the required roles, false otherwise</returns>
         public static bool IsInRoles(this ClaimsPrincipal user, params string[] requiredRoles)
         {
-            return user != null && requiredRoles.All(user.IsInRole);
+            return user != null && requiredRoles != null && requiredRoles.All(user.IsInRole);
         }
 
         /// <summary>
@@ -76,7 +76,7 @@
         /// <returns>True if the user is in at least one of the required roles, false otherwise</returns>
         public static bool IsInAnyRole(this ClaimsPrincipal user, params string[] requiredRoles)
         {
-            return user != null && requiredRoles.Any(user.IsInRole);
+            return user != null && requiredRoles != null && requiredRoles.Any(user.IsInRole);
         }
     }
 }

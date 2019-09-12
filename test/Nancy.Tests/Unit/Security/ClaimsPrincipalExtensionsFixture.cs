@@ -341,7 +341,7 @@ namespace Nancy.Tests.Unit.Security
         {
             // Given
             ClaimsPrincipal user = GetFakeUser("Fake");
-            var requiredRoles = null;
+            string[] requiredRoles = null;
 
             // When
             var result = user.IsInRoles(requiredRoles);
@@ -411,7 +411,7 @@ namespace Nancy.Tests.Unit.Security
         {
             // Given
             ClaimsPrincipal user = GetFakeUser("Fake");
-            var requiredRoles = null;
+            string[] requiredRoles = null;
 
             // When
             var result = user.IsInAnyRole(requiredRoles);
